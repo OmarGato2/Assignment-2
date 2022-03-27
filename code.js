@@ -123,7 +123,6 @@ function setup() {
    
    $("#prev").click(prev);
 
-   
    $("#next").hide();
    
    $("#prev").hide();
