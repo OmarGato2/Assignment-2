@@ -24,7 +24,6 @@ function paginate_menu(){
 function process_response(data) {
     received_object = data;
     for (i = 0; i < data.results.length; i++) {
-
         $("#results").append(data.results[i].original_title + "<br>");
 
         $("#results").append(data.results[i].overview + "<br>");
@@ -33,7 +32,7 @@ function process_response(data) {
         $("#results").append(image_html + "<br>");
 
         z = `<button id="${data.results[i].backdrop_path}" class="backdrop_button"> backdrop image!</button>`
-        $("#results").append(z + "<br>");
+        $("#results").append(z + "<br>" + "<hr>");
     }
 
     // inject the buttons 
