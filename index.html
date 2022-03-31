@@ -1,59 +1,45 @@
 <html>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-
-    </script>
-
-    <script src="code.js">
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="code.js"></script>
 
     <style>
-        article {
-            width: 50%;
-            float: left;
-        }
-
-        img {
-            width: 50%;
+        table,
+        th,
+        td {
+            border: 1px solid black;
         }
     </style>
 </head>
 
-<body>
-    <header>
-        <select name="page_size" id="page_size">
-            <option value="3">3</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-        </select>
-
-        <button id="first">First</button>
-        <button id="prev">Prev</button>
-
-        <div id="numbered_buttons_id">
-
+<body id="list_">
+    Page size
+    <!-- <input list="page_size" > <datalist id="page_size"> <option value="3"> <option value="5"><option value="10" </datalist> -->
+    <select name="page_size" id="page_size">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+    <div id="main_area_style">
+        <div style="width:50%; float:left">
+            Search TMDB by Title
+            <input id="q_" type="text" value="300">
+            </input>
+            <button id="search">Search!</button>
+            <section style="display:none;">
+                <button id="first">First</button>
+                <button id="prev" style="display:none;">Prev</button>
+                <span id="page_numbers"></span>
+                <button id="next" style="display:none;">Next</button>
+                <button id="last">Last</button>
+            </section>
+            <div id="result"></div>
         </div>
-
-        <button id="next">Next</button>
-        <button id="last">Last</button>
-    </header>
-    <article>
-        Enter movie title
-        <input type="text" id="movie_name">
-        <button id="find_movie_info">Click Me!</button>
-
-        <div id="results">
-
-        </div>
-
-    </article>
-
-    <article id="right_div">
-
-    </article>
+        <div id="plot" style="width:50%; float:left"></div>
+    </div>
+    </div>
 </body>
 
 </html>
